@@ -5,21 +5,21 @@ const { SocialType } = require('./features/social/data');
  */
 const config = {
   api: {
-    host: 'https://explorer.bulwarkcrypto.com',
+    host: '',
     port: '3000',
     portWorker: '443',
     prefix: '/api',
     timeout: '5s'
   },
   coinDetails: {
-    name: 'Bulwark',
-    shortName: 'BWK',
+    name: 'APHOLDING',
+    shortName: 'AP1',
     displayDecimals: 2,
-    longName: 'Bulwark Cryptocurrency',
+    longName: 'APHOLDINGD',
     coinNumberFormat: '0,0.0000',
     coinTooltipNumberFormat: '0,0.0000000000', // Hovering over a number will show a larger percision tooltip
     websiteUrl: 'https://bulwarkcrypto.com/',
-    masternodeCollateral: 5000, // MN ROI% gets based on this number. If your coin has multi-tiered masternodes then set this to lowest tier (ROI% will simply be higher for bigger tiers)
+    masternodeCollateral: 50000, // MN ROI% gets based on this number. If your coin has multi-tiered masternodes then set this to lowest tier (ROI% will simply be higher for bigger tiers)
   },
   offChainSignOn: {
     enabled: true,
@@ -29,7 +29,7 @@ const config = {
   // Add any important block counting down in this array
   blockCountdowns: [
     {
-      block: 602880, // What block are we counting down to?
+      block: 3, // What block are we counting down to?
       beforeTitle: 'Next Superblock', // What do we show before the block number is hit?
       afterTitle: 'Superblock Active For' // What do we show after the block number is hit?
     }
@@ -219,7 +219,7 @@ const config = {
   /**
    * Cron & Syncing
    */
-  blockConfirmations: 10,           // We will re-check block "merkleroot" this many blocks back. If they differ we will then start unwinding carver movements one block at a time until correct block is found. (This is like min confirmations)
+  blockConfirmations: 6,           // We will re-check block "merkleroot" this many blocks back. If they differ we will then start unwinding carver movements one block at a time until correct block is found. (This is like min confirmations)
   verboseCron: true,                // If set to true there are extra logging details in cron scripts
   verboseCronTx: false,             // If set to true there are extra tx logging details in cron scripts (Not recommended)
   blockSyncAddressCacheLimit: 50000 // How many addresses to keep in memory during block syncing (When this number is reached the entire cache is flushed and filled again from beginning)
