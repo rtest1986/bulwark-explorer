@@ -12,8 +12,8 @@ const secretsConfig = {
   rpc: {
     host: '127.0.0.1',
     port: '52541',
-    user: 'bulwarkrpc',
-    pass: 'someverysafepassword',
+    user: 'ap1',
+    pass: 'ap11',
     timeout: 8000, // 8 seconds
   },
   social: {
