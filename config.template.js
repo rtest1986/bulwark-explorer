@@ -5,7 +5,7 @@ const { SocialType } = require('./features/social/data');
  */
 const config = {
   api: {
-    host: '',
+    host: '178.254.28.153',
     port: '3000',
     portWorker: '443',
     prefix: '/api',
